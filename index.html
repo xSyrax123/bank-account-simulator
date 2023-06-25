@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bank Account Simulator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <h1>Simulador de cuentas bancarias</h1>
+
+  <main>
+    <section>
+      <fieldset class="client-data">
+        <legend>Datos del cliente</legend>
+        <div>
+          <label for="name">Nombre y apellido:</label>
+          <input type="text" value="Lucio Mazzini" id="name" readonly></input>
+        </div>
+        <div>
+          <label for="cedula">Cédula</label>
+          <input type="text" value="3.132.522-7" id="cedula" readonly></input>
+        </div>
+        <div>
+          <label for="month">Mes</label>
+          <input type="number" value="1" min="1" id="month"></input>
+        </div>
+      </fieldset>
+    </section>
+
+    <section>
+      <fieldset class="bank-information">
+        <legend>Información bancaria</legend>
+        <fieldset class="account">
+          <legend>Cuenta de ahorros</legend>
+          <div>
+            <label for="balance-savings">Saldo:</label>
+            <input type="text" value="$0.00 [0.6%]" id="balance-savings"></input>
+          </div>
+          <div>  
+            <button class="btn" id="deposit-savings">Consignar</button>
+            <button class="btn" id="withdraw-savings">Retirar</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="account">
+          <legend>Cuenta corriente</legend>
+          <div>
+            <label for="balance-checking">Saldo:</label>
+            <input type="text" value="$0.00" id="balance-checking"></input>
+          </div>
+          <div>  
+            <button class="btn" id="deposit-checking">Consignar</button>
+            <button class="btn" id="withdraw-checking">Retirar</button>
+          </div>  
+        </fieldset>
+
+        <fieldset class="account">
+          <legend>CDT</legend>
+          <div>
+            <label for="balance-cdt">Saldo:</label>
+            <input type="text" value="$0.00 [0.0%]" id="balance-cdt"></input>
+          </div>  
+          <div> 
+            <button class="btn" id="deposit-cdt">Abrir</button>
+            <button class="btn" id="withdraw-cdt">Cerrar</button>
+          </div>
+        </fieldset>
+      </fieldset>
+    </section>
+
+    <section class="total">
+      <div>
+        <label for="balance-total">Total:</label>
+        <input type="text" value="$0.00" id="balance-total"></input>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
